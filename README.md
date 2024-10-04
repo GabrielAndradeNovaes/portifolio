@@ -18,6 +18,7 @@ More images [here](https://www.gbdev.me/projects/portfolio-tutorial-2023)
 * Tailwind
 * Framer Motion
 * Hygraph CMS
+* hsdiahdsi
 
 &nbsp;
 
