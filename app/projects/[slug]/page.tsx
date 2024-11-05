@@ -1,3 +1,4 @@
+
 import { ProjectDetails } from '@/app/components/pages/project/project-details'
 import { ProjectSections } from '@/app/components/pages/project/project-sections'
 import { ProjectPageData, ProjectsPageStaticData } from '@/app/types/page-info'
@@ -13,7 +14,7 @@ type ProjectProps = {
 
 const getProjectDetails = async (slug: string): Promise<ProjectPageData> => {
   const query = `
-  query ProjectQuery() {
+  query ProjectQuery {
     project(where: {slug: "${slug}"}) {
       pageThumbnail {
         url
@@ -41,7 +42,7 @@ const getProjectDetails = async (slug: string): Promise<ProjectPageData> => {
     }
   }
   `
-  const data = fetchHygraphQuery<ProjectPageData>(
+  const data = await fetchHygraphQuery<ProjectPageData>(
     query,
     1000 * 60 * 60 * 24, // 1 day
   )
@@ -64,7 +65,7 @@ export default async function Project({ params: { slug } }: ProjectProps) {
 
 export async function generateStaticParams() {
   const query = `
-    query ProjectsSlugsQuery() {
+    query ProjectsSlugsQuery{
       projects(first: 100) {
         slug
       }
