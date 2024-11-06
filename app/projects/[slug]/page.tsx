@@ -1,4 +1,3 @@
-
 import { ProjectDetails } from '@/app/components/pages/project/project-details'
 import { ProjectSections } from '@/app/components/pages/project/project-sections'
 import { ProjectPageData, ProjectsPageStaticData } from '@/app/types/page-info'
