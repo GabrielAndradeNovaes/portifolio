@@ -9,11 +9,11 @@ export type Social = {
 
 export type HomePageInfo = {
   introduction: {
-    raw: RichTextContent;
+    raw: RichTextContent
   }
   technologies: KnownTech[]
   profilePicture: {
-    url: string;
+    url: string
   }
   socials: Social[]
   knownTechs: KnownTech[]
